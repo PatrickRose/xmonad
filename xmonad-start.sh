@@ -4,7 +4,7 @@ xsetroot -cursor_name left_ptr
 
 setxkbmap -layout gb
 
-feh --bg-fill /home/patrick/.xmonad/background.png
+feh --bg-fill /home/patrick/.xmonad/wallpaper.jpg
 
 setxkbmap -layout gb
 
