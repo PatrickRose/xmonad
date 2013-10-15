@@ -15,5 +15,9 @@ xscreensaver -no-splash &
 if [ -x /usr/bin/nm-applet ] ; then
    nm-applet --sm-disable &
 fi
+
+if [ -x /usr/bin/pasystray ] ; then
+   pasystray &
+fi
  
 (sleep 2 && dropboxd) &
