@@ -4,6 +4,7 @@ import XMonad.Hooks.ManageDocks
 import XMonad.Util.Run(spawnPipe)
 import XMonad.Util.EZConfig(additionalKeys)
 import System.IO
+import XMonad.Hooks.SetWMName
 
 main = do
     xmproc <- spawnPipe "/bin/xmobar /home/patrick/.xmonad/.xmobarrc"
@@ -17,7 +18,7 @@ main = do
                         }
         , terminal    = "xfce4-terminal"
         , modMask = mod4Mask     -- Rebind Mod to the Windows key
-        } `additionalKeys`
+        , startupHook = setWMName "LG3D" } `additionalKeys`
         [ ((mod4Mask .|. shiftMask, xK_z), spawn "xscreensaver-command -lock")
         , ((controlMask, xK_Print), spawn "sleep 0.2; scrot -s")
         , ((0, xK_Print), spawn "scrot")
